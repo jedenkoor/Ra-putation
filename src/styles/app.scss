@@ -1,0 +1,75 @@
+@import 'common/normalize';
+
+:root{
+	--white-main: #E9E9E9;
+	--white-sub: #939496;
+	--prpl-btn: #5835BA;
+	--prpl-btn-hover: #7854DA;
+	--prpl-btn-active: #4D2BAB;
+	--prpl-light: #6F4FC9;
+	--black-btn: #373A40; 
+	--background: #1F2022;
+	--background-light: #26292D;
+}
+
+::selection {
+	background-color: rgba(88,53,186,0.99);
+	color: var(--white-main);
+}
+
+@media screen and (min-width: 1200px){
+	::-webkit-scrollbar {
+			width: 17px;
+	}
+	::-webkit-scrollbar-button {
+		display: none;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: var(--black-btn);
+		border-radius: 5px;
+		border: 2px solid var(--background);
+	}
+	::-webkit-scrollbar-track {
+		background-color: var(--background);
+	}
+}
+
+html,
+body{
+	display: block;
+	color: var(--white-main);
+	margin: 0;
+	font-size: 16px;
+	line-height: 150%;
+	font-family: 'Bw Quinta Pro';
+	letter-spacing: 0.0075em;
+}
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+	flex-direction: column;
+	overflow-x: hidden;
+	background: var(--background);
+}
+.content {
+	flex: 1;
+	position: relative;
+}
+.mycontainer{
+	max-width: 1320px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.title{
+	font-size: 36px;
+	line-height: 135%;
+	font-weight: bold;
+}
+
+
+
+@import 'common/adaptive';
+@import 'common/fonts';
+@import 'common/header';
+@import 'common/footer';
+@import 'pages/index';

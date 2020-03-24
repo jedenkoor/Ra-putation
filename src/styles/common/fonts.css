@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Avenir Next Cyr';
+	src: url('../fonts/AvenirNextCyr-Demi.eot');
+	src: url('../fonts/AvenirNextCyr-Demi.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/AvenirNextCyr-Demi.woff') format('woff'),
+	url('../fonts/AvenirNextCyr-Demi.ttf') format('truetype');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Bw Quinta Pro';
+	src: url('../fonts/BwQuintaPro-Bold.eot');
+	src: url('../fonts/BwQuintaPro-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BwQuintaPro-Bold.woff') format('woff'),
+	url('../fonts/BwQuintaPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Bw Quinta Pro';
+	src: url('../fonts/BwQuintaPro-Medium.eot');
+	src: url('../fonts/BwQuintaPro-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BwQuintaPro-Medium.woff') format('woff'),
+	url('../fonts/BwQuintaPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
