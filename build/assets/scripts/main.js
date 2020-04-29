@@ -27,3 +27,18 @@ $(document).on('click', '.main-cases__more', function (e) {
 	}
 });
 /*Показать еще Конец*/
+
+
+/*FAQ*/
+$(document).on('click', '.main-faq-item__title', function (e) {
+	if($(this).hasClass('active')){
+		$(this).next().slideUp();
+		$(this).removeClass('active');
+	} else {
+		$('.main-faq-item__title').removeClass('active');
+		$('.main-faq-item__text').slideUp();
+		$(this).addClass('active');
+		$(this).next().slideDown()
+	}
+});
+/*FAQ Конец*/
