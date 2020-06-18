@@ -3,10 +3,25 @@ header.header
 		.header__logo
 			img(src="assets/images/logo.svg" alt="" style="margin-left:-5px")
 		nav.header-menu
-			a.header-menu__href(href="#") Виды услуг
-			a.header-menu__href(href="#") Что это такое
-			a.header-menu__href(href="#") Для кого
-			a.header-menu__href(href="#") Решаемые задачи
+			a.header-menu__href(href="#made") Виды услуг
+			a.header-menu__href(href="#about") Что это такое
+			a.header-menu__href(href="#actual") Для кого
+			a.header-menu__href(href="#tasks") Решаемые задачи
 		.header-info
 			a.header-info__tel(href="+78126112333") +7 (812) 611-2-333
 			a.header-info__btn(href="#") Заказать звонок
+			.header-info__burger
+				<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line y1="1" x2="30" y2="1" stroke="#F9F9F9" stroke-width="2"></line>
+					<line y1="9" x2="30" y2="9" stroke="#F9F9F9" stroke-width="2"></line>
+					<line y1="17" x2="30" y2="17" stroke="#F9F9F9" stroke-width="2"></line>
+				</svg>
+	.header-popup
+		.header-popup-menu
+			a.header-popup-menu__item(href="#made") Виды услуг
+			a.header-popup-menu__item(href="#about") Что это такое
+			a.header-popup-menu__item(href="#actual") Для кого
+			a.header-popup-menu__item(href="#tasks") Решаемые задачи
+		.header-popup-bot
+			a.header-popup-bot__tel(href="tel:+78126112333") +7 (812) 611-2-333
+			a.header-popup-bot__btn.popup__btn(href="#") Заказать звонок

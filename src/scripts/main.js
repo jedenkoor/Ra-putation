@@ -13,9 +13,16 @@ function resizewindow() {
 
 
 /*Показать еще*/
-
 let cases = $('.main-cases-items-item'),
-	countCases = cases.length - 3;
+	countCases = cases.length - 3,
+	maxHeight = 0;
+for (let i = 0; i < 3; i++) {
+	console.log(cases.eq(i).outerHeight());
+	maxHeight += cases.eq(i).outerHeight();
+}
+maxHeight += 48;
+$('.main-cases-items').css('max-height', maxHeight)
+console.log(maxHeight);
 $(document).on('click', '.main-cases__more', function (e) {
 	countCases -= 3;
 	let casesWrap = $('.main-cases-items'),
@@ -42,3 +49,27 @@ $(document).on('click', '.main-faq-item__title', function (e) {
 	}
 });
 /*FAQ Конец*/
+
+/*Мобильное Меню*/
+$(document).on('click', '.header-info__burger', function (e) {
+	$(this).toggleClass('active');
+	$('.header-popup').toggleClass('active');
+	$('body').toggleClass('fixed');
+});
+/*Мобильное Меню Конец*/
+
+
+/*Скролл меню*/
+$(document).on('click', '.header-menu__href, .header-popup-menu__item', function (e) {
+	e.preventDefault();
+	let idElem = $(this).attr('href').split('#')[1],
+			valScrollTop = $('#' + idElem).offset().top - 50;
+	$('body,html').animate({
+			scrollTop: valScrollTop
+	}, 800);
+
+	$('.header-info__burger').removeClass('active');
+	$('.header-popup').removeClass('active');
+	$('body').removeClass('fixed');
+});
+/*Скролл меню Конец*/

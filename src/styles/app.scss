@@ -43,6 +43,10 @@ body{
 	line-height: 150%;
 	font-family: 'Bw Quinta Pro';
 	letter-spacing: 0.0075em;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+body.fixed {
+	overflow: hidden;
 }
 .wrapper {
   display: flex;

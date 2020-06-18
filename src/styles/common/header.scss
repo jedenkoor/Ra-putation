@@ -3,6 +3,7 @@
 	.mycontainer{
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 	&-menu{
 		display: flex;
@@ -54,6 +55,94 @@
 					background: var(--prpl-btn-active);
 					transition: 0s;
 				}
+			}
+		}
+		&__burger{
+			display: none;
+		}
+	}
+	&-popup{
+		display: none;
+	}
+}
+
+@include w768{
+	.header{
+		.mycontainer{
+			position: relative;
+    	z-index: 10;
+		}
+		&-menu{
+			display: none;
+		}
+		&-info{
+			&__burger{
+				display: flex;
+				padding: 20px;
+				margin-left: 20px;
+				margin-right: -20px;
+				cursor: pointer;
+				&.active{
+					svg{
+						line{
+							&:nth-child(1){
+								transform: translate(5px, -2px) rotate(45deg);
+							}
+							&:nth-child(2){
+								transform: translateX(100%);
+								opacity: 0;
+							}
+							&:nth-child(3){
+								transform: translate(-7px, 8px) rotate(-45deg);
+							}
+						}
+					}
+				}
+				svg{
+					overflow: visible;
+					line{
+						transition: .3s;
+					}
+				}
+			}
+		}
+		&-popup{
+			display: block;
+			position: fixed;
+			z-index: 3;
+			width: 100%;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			left: 0;
+			top: 0;
+			background: var(--background);
+			padding: 0 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			transform: translateY(-100%);
+			transition: .5s;
+			&.active{
+				transform: translateY(0);
+				.header-popup-menu{
+					transition: .3s;
+					transition-delay: .3s;
+					opacity: 1;
+				}
+			}
+			&-menu{
+				transition: 0s;
+				opacity: 0;
+				&__item{
+					font-size: 36px;
+					padding: 20px 0;
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+			&-bot{
+				display: none;
 			}
 		}
 	}
