@@ -1,0 +1,250 @@
+.popup,
+.privacy,
+.case-popup{
+	position: fixed;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	&-wrap{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	&__overlay{
+		position: fixed;
+		width: 101%;
+		height: 100%;
+		background: #1F2022;
+	}
+	&__close{
+		position: fixed;
+		z-index: 5;
+		right: 40px;
+		top: 40px;
+		cursor: pointer;
+	}
+	&-success{
+		display: none;
+		max-width: 550px;
+	}
+	&-form{
+		position: relative;
+		max-width: 550px;
+		z-index: 2;
+		&__title{
+			font-size: 36px;
+			margin-bottom: 88px;
+			line-height: 135%;
+		}
+		.general-form{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			align-self: flex-start;
+			.general-itemInput{
+				position: relative;
+				box-sizing: border-box;
+				margin-bottom: 56px;
+				width: 100%;
+				&.general-itemInput_25{
+					width: calc(100% / 4 - (90px / 4));
+				}
+				&.general-itemInput_33{
+					width: calc(100% / 3 - (60px / 3));
+				}
+				&.general-itemInput_50{
+					width: calc(100% / 2 - (30px / 2));
+				}
+				&__input{
+					border: none;
+					border-bottom: 2px solid #939496;
+					height: 100%;
+					width: 100%;
+					background: none;
+					font-size: 18px;
+					height: 38px;
+					color: #fff;
+					&::placeholder{
+						color: #939496;
+					}
+					&:focus{
+						border-bottom: 2px solid #5835BA;
+					}
+					&.input-border{
+						border-bottom: 2px solid #E9E9E9;
+					}
+					&.input-err{
+						border-bottom: 2px solid #EB5757;
+					}
+				}
+			}
+			.general-bottomBlock{
+				display: flex;
+				align-items: center;
+				button{
+					width: 227px;
+					height: 60px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: var(--prpl-btn);
+					border-radius: 3px;
+					color: #FFFFFF;
+					border: none;
+					margin-right: 20px;
+					cursor: pointer;
+					transition: .3s;
+					@include hover{
+						&:hover{
+							background: var(--prpl-btn-hover);
+							box-shadow: 1px 2px 10px rgba(183, 104, 176, 0.3);
+							
+						}
+						&:active{
+							background: var(--prpl-btn-active);
+							transition: 0s;
+							box-shadow: 1px 2px 10px rgba(183, 104, 176, 0.1);
+						}
+					}
+				}
+				p{
+					color: var(--white-sub);
+					max-width: 350px;
+					font-size: 14px;
+					a{
+						display: inline-block;
+						text-decoration: underline;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	&-privacy{
+		position: relative;
+		z-index: 2;
+		align-self: flex-start;
+		padding: 64px 16px 0;
+		height: 100%;
+		&-wrap{
+			max-width: 1160px;
+			margin: 0 auto 64px;	
+		}
+		p,
+		ul,
+		ol{
+			color: var(--white-sub);
+		}
+		&__title{
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 30px;
+			line-height: 115%;
+		}
+		&__subtitle{
+			margin-top: 16px;
+			margin-bottom: 8px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+}
+.privacy,
+.case-popup{
+	overflow-y: auto;
+}
+.case-popup{
+	&-content{
+		position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    padding: 64px 16px 160px;
+    height: 100%;
+		max-width: 660px;
+		&__title{
+			font-weight: bold;
+			font-size: 36px;
+			margin-bottom: 16px;
+			line-height: 135%;
+		}
+		&__date{
+			font-weight: 500;
+			font-size: 18px;
+			color: #939496;
+			margin-bottom: 40px;
+		}
+		p{
+			margin-bottom: 40px;
+		}
+		img{
+			width: 100%;
+			margin-bottom: 8px;
+		}
+		&__imgspan{
+			display: inline-block;
+			font-weight: 500;
+			font-size: 18px;
+			color: #939496;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@include w480{
+	.popup{
+		&__close{
+			top: 16px;
+			right: 16px;
+			svg{
+				width: 20px;
+				height: 20px;
+			}
+		}
+		&-form{
+			width: calc(100% - 32px);
+			&__title{
+				font-size: 23px;
+				margin-bottom: 32px;
+			}
+			.general-form{
+				.general-itemInput{
+					margin-bottom: 24px;
+					&.general-itemInput_25,
+					&.general-itemInput_33,
+					&.general-itemInput_50{
+						width: 100%;
+					}
+					&__input{
+						font-size: 16px;
+					}
+				}
+				.general-bottomBlock{
+					flex-direction: column;
+					align-items: flex-start;
+					margin-top: 8px;
+					button{
+						width: 100%;
+						margin-bottom: 16px;
+						height: 50px;
+						margin-right: 0;
+					}
+					p{
+						text-align: center;
+						max-width: none;
+					}
+				}
+			}
+		}
+		&-privacy{
+			&__title{
+				font-size: 23px;
+			}
+		}
+	}
+}

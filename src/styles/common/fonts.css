@@ -5,6 +5,7 @@
 	url('../fonts/AvenirNextCyr-Demi.woff') format('woff'),
 	url('../fonts/AvenirNextCyr-Demi.ttf') format('truetype');
 	font-weight: 600;
+	font-display: block;
 }
 @font-face {
 	font-family: 'Bw Quinta Pro';
@@ -13,6 +14,7 @@
 	url('../fonts/BwQuintaPro-Bold.woff') format('woff'),
 	url('../fonts/BwQuintaPro-Bold.ttf') format('truetype');
 	font-weight: bold;
+	font-display: block;
 }
 @font-face {
 	font-family: 'Bw Quinta Pro';
@@ -21,4 +23,5 @@
 	url('../fonts/BwQuintaPro-Medium.woff') format('woff'),
 	url('../fonts/BwQuintaPro-Medium.ttf') format('truetype');
 	font-weight: 500;
+	font-display: block;
 }

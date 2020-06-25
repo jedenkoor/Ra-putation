@@ -1,4 +1,5 @@
 @import 'common/normalize';
+@import 'common/adaptive';
 
 :root{
 	--white-main: #E9E9E9;
@@ -36,6 +37,7 @@
 
 html,
 body{
+	background: var(--background);
 	display: block;
 	color: var(--white-main);
 	margin: 0;
@@ -45,9 +47,21 @@ body{
 	letter-spacing: 0.0075em;
 	font-feature-settings: 'pnum' on, 'lnum' on;
 }
-body.fixed {
-	overflow: hidden;
+body{
+	&.fixed{
+		overflow: hidden;
+		@include hover{
+			padding-right: 17px;
+			.popup{
+				padding-right: 17px;
+				&__close{
+					right: 57px;
+				}
+			}
+		}
+	}
 }
+
 .wrapper {
   display: flex;
   min-height: 100vh;
@@ -70,10 +84,17 @@ body.fixed {
 	font-weight: bold;
 }
 
-
-
-@import 'common/adaptive';
 @import 'common/fonts';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/popup';
 @import 'pages/index';
+
+@include w480{
+	.title{
+		font-size: 24px;
+	}
+	.mycontainer{
+		padding: 0 16px;
+	}
+}

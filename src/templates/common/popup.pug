@@ -1,0 +1,27 @@
+.popup
+	.popup-wrap
+		.popup__overlay
+		.popup__close
+			<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M31 1L16 16M1 31L16 16M16 16L31 31M16 16L1 1" stroke="#F9F9F9" stroke-width="2"/>
+			</svg>
+
+		form.popup-form(action="#")
+			.popup-form__title Расскажем, как улучшить репутацию Вашего бренда
+			.popup-form-content.general-form
+				.general-itemInput
+					input.general-itemInput__input(type="text" data-required="" placeholder="Имя")
+				.general-itemInput.general-itemInput_50
+					input.general-itemInput__input(type="tel" data-type="tel" data-required="" placeholder="Телефон" autocomplete="off")
+				.general-itemInput.general-itemInput_50
+					input.general-itemInput__input(type="text" data-type="email" placeholder="Электронная почта")
+				.general-itemInput
+					input.general-itemInput__input(type="text" placeholder="Описание проекта")
+				.general-bottomBlock
+					button.general__btn(type="submit") Отправить
+					p.general-bottomBlock__text Заполняя форму, вы соглашаетесь с 
+						a.privacy__btn(href="#") политикой конфиденциальности
+
+		.popup-success
+			span 👍 
+			| Ваша заявку успешно отправлена, мы скоро свяжемся с вами!
